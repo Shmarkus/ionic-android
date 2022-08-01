@@ -17,7 +17,7 @@ ENV PATH=$PATH:/opt/$NODE_BIN_NAME/bin:/opt/$GRADLE_BIN_NAME/bin
 ADD cmdline-tools $ANDROID_HOME/cmdline-tools/latest
 
 RUN apt update
-RUN apt install xz-utils unzip
+RUN apt install xz-utils unzip git
 
 RUN curl -L https://nodejs.org/dist/$NODE_BIN_VER/$NODE_ZIP_PKG > $NODE_ZIP_PKG
 RUN tar xf $NODE_ZIP_PKG
